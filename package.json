@@ -1,8 +1,8 @@
 {
-  "homepage": "https://f7deat.github.io/def-admin-reactjs/",
   "name": "def-admin-reactjs",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://f7deat.github.io/def-admin-reactjs/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
