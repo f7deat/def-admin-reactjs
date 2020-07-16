@@ -1,0 +1,23 @@
+html, body, #root {
+    height: 100%;
+}
+#root {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+	color: #c4c3ca;
+	background-color: #1f2029;
+}
+.form-signin {
+    width: 100%;
+    max-width: 430px;
+    margin: auto;
+}
+.copyright {
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
