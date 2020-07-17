@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 html, body, #root, .loginWrapper {
     height: 100%;
 }
@@ -9,7 +11,7 @@ html, body, #root, .loginWrapper {
     padding-top: 40px;
     padding-bottom: 40px;
 	color: #c4c3ca;
-	background-color: #1f2029;
+	background-color: $primary-background;
 }
 .form-signin {
     width: 100%;
@@ -20,4 +22,19 @@ html, body, #root, .loginWrapper {
     right: 0;
     bottom: 0;
     position: absolute;
+}
+.custom-sidebar {
+    width: 250px;
+    position: fixed;
+    height: 100%;
+    transition: width 1s;
+}
+.custom-nav-link {
+    color: #cccccc;
+}
+.custom-nav-link:hover {
+    color: #ffffff;
+}
+.custom-nav-link.active {
+    color: #ffffff;
 }

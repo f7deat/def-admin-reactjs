@@ -1,19 +1,19 @@
 import React from 'react';
-import { Switch, Route } from "react-router-dom";
+import Navbar from './layouts/navbar';
+import { Route, Switch } from 'react-router-dom';
 import Dashboard from './components/dashboard';
-import Login from './components/login';
+import Sidebar from './layouts/sidebar';
 
 export default class App extends React.Component {
     render() {
         return (
-            <Switch>
-                <Route path="/login">
-                    <Login />
-                </Route>
-                <Route path="/">
-                    <Dashboard />
-                </Route>
-            </Switch>
+            <div>
+                <Navbar />
+                <Sidebar/>
+                <Switch>
+                    <Route path="/dashboard" component={Dashboard} />
+                </Switch>
+            </div>
         );
     }
 }

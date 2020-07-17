@@ -2,14 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles.css';
+import './styles/styles.scss';
 import App from './app';
 import { HashRouter } from 'react-router-dom';
+import { Switch, Route } from "react-router-dom";
+import Login from './components/login';
+import 'jquery/dist/jquery.min.js'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
 ReactDOM.render(
   <React.StrictMode>
     <HashRouter>
-      <App />
+      <Switch>
+        <Route path="/login" component={Login}/>
+        <Route path="/" component={App}/>
+      </Switch>
     </HashRouter>
   </React.StrictMode>,
   document.getElementById('root')

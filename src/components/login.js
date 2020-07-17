@@ -7,7 +7,7 @@ export default class Login extends React.Component {
     render() {
         return (
             <div className="loginWrapper">
-                <formv className="form-signin p-4">
+                <form className="form-signin p-4">
                     <h1 className="h3 mb-4 font-weight-normal">Please sign in</h1>
                     <div className="input-group mb-2">
                         <div className="input-group-prepend">
@@ -26,7 +26,7 @@ export default class Login extends React.Component {
                         <label className="custom-control-label" htmlFor="customSwitch1">Remember me</label>
                     </div>
                     <Link to="/dashboard" className="btn btn-primary btn-block">Sign in</Link>
-                </formv>
+                </form>
                 <p className="pr-2 copyright text-muted">© 2020 <a href="https://github.com/f7deat" className="text-white">F7Deat</a></p>
             </div>
         );
