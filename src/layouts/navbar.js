@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { faSignOutAlt, faBars, faCog, faBell } from '@fortawesome/free-solid-svg-icons';
 
 export default class Navbar extends React.Component {
     render() {
@@ -13,7 +13,7 @@ export default class Navbar extends React.Component {
                     </div>
                     <div className="flex-md-grow-1 p-2">
                         <button className="btn btn-light" id="toggle-sidebars">
-                            <i className="fas fa-bars" />
+                            <FontAwesomeIcon icon={faBars} />
                         </button>
                     </div>
                     <div className="d-none d-md-block">
@@ -21,7 +21,7 @@ export default class Navbar extends React.Component {
                             <ul className="nav">
                                 <li className="nav-item">
                                     <Link to="#" className="nav-link p-3 text-dark" role="button" id="dropdownMenuNotify" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i className="far fa-bell" />
+                                        <FontAwesomeIcon icon={faBell}/>
                                         <span className="bg-danger dot-notify" />
                                     </Link>
                                     <div className="dropdown-menu dropdown-menu-right border-0 shadow p-0" aria-labelledby="dropdownMenuNotify">
@@ -54,11 +54,13 @@ export default class Navbar extends React.Component {
                                         <Link className="dropdown-item" to="#"><i className="far fa-user" /> My Account</Link>
                                         <Link className="dropdown-item" to="#"><i className="fas fa-cog" /> Settings</Link>
                                         <div className="dropdown-divider" />
-                                        <Link className="dropdown-item" to="/login"><FontAwesomeIcon icon={faSignOutAlt}/> Logout</Link>
+                                        <Link className="dropdown-item" to="/login"><FontAwesomeIcon icon={faSignOutAlt} /> Logout</Link>
                                     </div>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="#" className="nav-link p-3 text-dark"><i className="fas fa-cog fa-spin" /></Link>
+                                    <Link to="#" className="nav-link p-3 text-dark">
+                                        <FontAwesomeIcon icon={faCog} spin={true} />
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
