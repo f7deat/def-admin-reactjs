@@ -1,14 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFile, faGift, faPlusCircle, faUser, faUserLock } from '@fortawesome/free-solid-svg-icons';
+import { faFile, faGift, faPlusCircle, faUser, faUserLock, faChartBar } from '@fortawesome/free-solid-svg-icons';
 
 export default class Sidebar extends React.Component {
     render() {
         return (
-            <nav className="d-md-block bg-dark sidebar collapse h-100 custom-sidebar shadow">
+            <nav className={this.props.collapsed ? "d-md-block bg-dark sidebar collapse h-100 custom-sidebar shadow" : "d-md-block bg-dark sidebar collapse h-100 custom-sidebar shadow show"}>
                 <div className="sidebar-sticky pt-3">
                     <ul className="nav flex-column">
+                        <li className="nav-item">
+                            <Link className="nav-link custom-nav-link active" to="/dashboard">
+                                <i className="fas fa-file" />
+                                <FontAwesomeIcon icon={faChartBar} /> Dashboard
+                            </Link>
+                        </li>
                         <li className="nav-item">
                             <Link className="nav-link custom-nav-link active" to="#">
                                 <i className="fas fa-file" />

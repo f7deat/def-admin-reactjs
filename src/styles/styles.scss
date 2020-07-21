@@ -39,5 +39,15 @@ html, body, #root, .loginWrapper {
     color: #ffffff;
 }
 .width-240px {
+    flex-grow: 1;
+}
+@media (min-width: 768px) {
+.width-240px {
     width: 240px;
+    flex-grow: 0;
+}
+main {
+    margin-left: 240px;
+    padding: 1.5rem;
+}
 }
