@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: "Jost", sans-serif;
+}
+
+.login-logo {
+    max-width: 300px;
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 430px;
+}
+#icon {
+    animation: arrives 1s 1 forwards, coucou 3s 1.5s infinite;
+    transform-origin: 85% 10%;
+}
+
+@keyframes arrives {
+    0% {
+        transform: rotate(180deg) scale(0);
+    }
+    100% {
+        transform: rotate(0) scale(.9);
+    }
+}
+
+@keyframes coucou {
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(.9);
+    }
+}

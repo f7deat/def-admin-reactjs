@@ -1,9 +1,9 @@
 import React from 'react';
 import Navbar from './layouts/navbar';
-import { Route, Switch } from 'react-router-dom';
-import Dashboard from './components/dashboard';
 import Sidebar from './layouts/sidebar';
-import Profile from './pages/profile';
+import { Switch, Route } from 'react-router-dom';
+import Dashboard from './pages/dashboard';
+import ButtonPage from './pages/button';
 
 export default class App extends React.Component {
     state = {
@@ -13,7 +13,6 @@ export default class App extends React.Component {
         this.setState({
             collapsed: !this.state.collapsed
         })
-        console.log(this.state.collapsed)
     }
 
     render() {
@@ -24,7 +23,7 @@ export default class App extends React.Component {
                 <main>
                     <Switch>
                         <Route path="/dashboard" component={Dashboard} />
-                        <Route path="/profile" component={Profile} />
+                        <Route path="/button" component={ButtonPage} />
                     </Switch>
                 </main>
             </div>
